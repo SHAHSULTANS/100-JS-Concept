@@ -297,6 +297,14 @@ pre{
     
     
 }
+@media screen and (max-width:400px) {
+    .navmenu{
+        padding: 0;
+    }
+    .navmenu a{
+        font-size:1rem;
+    }
+}
 
 @media screen and (max-width:350px) {
 
@@ -321,8 +329,8 @@ pre{
         padding:5px;
     }
     .nav .logo{
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
    
     .col-25{
@@ -364,9 +372,7 @@ pre{
         font-size: 18px;
         padding: 10px;
     }
-    .nav img{
-        border-bottom-left-radius: 25px;
-    }
+   
     .nav .navmenu{
         border-bottom-right-radius: 30px;
     }
