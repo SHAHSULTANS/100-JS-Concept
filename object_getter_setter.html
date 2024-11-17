@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter & Setter Object</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+
+    </style>
+
+</head>
+
+<body>
+    <div class="nav">
+        <button class="hamberger" id="aside" onclick="showCol25()">&#9776;</button>
+        
+        <div class="logo">
+            <div class="mylogo">
+                <img src="images/mylogo2.png" alt="">
+            </div>
+        </div>
+        
+        <div class="search">
+            <input type="text" id="navsearch" placeholder="search here..." class="search" onkeyup="navsearch()">
+        </div>
+        <div class="navmenu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+
+        </div>
+        <button class="hamberger" onclick="hamberger()">&#9776;</button>
+    </div>
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-25">
+
+           
+            <h2 style="text-align: center;">100+ JavaScript</h2>
+            <a href="index.html">Loop In JS</a>
+
+            <a href="function_in_Js.html">Function</a>
+            <a href="localStorage.html">localStorage</a>
+
+
+
+
+            <a href="built_in_drag_drop.html">Drag Drop</a>
+            <a href="object_getter_setter.html" class="active">Object get set</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Asynchronous JS</h3>
+            <a href="call_back.html">Callback</a>
+            <a href="promises.html">Promises</a>
+
+
+
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Web API</h3>
+            <a href="web_API_intro.html" >Web API Intro</a>
+            <a href="cookie.html" >Cookie</a>
+            <a href="fetching_data.html" >Fetch API</a>
+            
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">JS PDF</h3>
+            <a href="jsPdf.html" >Basic Pdf</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Toast.js</h3>
+
+            <a href="toastrJS.html" class="active">Basic Toastr</a>
+
+
+
+
+
+        </div>
+
+
+        <div class="col-75">
+            <div class="projectname">
+                <h1>Object getter & setter </h1>
+            </div>
+
+            <div class="beginnerpurpose">
+                <div class="condition">
+                   <h3>In JS, getter & setter allow you to define how to access and update the properties of an object.</h3>
+
+                    <strong style="background-color: #dbc;padding:5px;">Here are key points:</strong>
+
+                    <ul>
+                        <li><strong>get:</strong> It has a return value and doesn't take any arguments.</li>
+                        <li><strong>set:</strong> It takes one argument and doesn't return a value.</li>
+
+                        <li>In JavaScript, the <strong>split()</strong> method is used to divide a string into an array of substrings, based on a specified separator or delimiter. The original string remains unchanged.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="showcontent">
+
+
+            </div>
+
+
+
+
+
+            <div class="jscode snipet">
+                <h2>get & set</h2>
+                <div class="jscontainer">
+                    <div class="js">
+                        <pre>
+<code>
+const Person={
+    firstName:"JOhn",
+    lastName:"Doe",
+
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`;
+    },
+
+    set fullName(name){
+        let parts=name.split(" ");
+        //console.log(parts[0]);
+        this.firstName=parts[0];
+        this.lastName=parts[1];
+
+    }
+}
+console.log(Person.fullName);//output:JOhn Doe
+Person.fullName="Shah sultan";
+console.log(Person.fullName);//output:Shah sultan
+</code>
+</pre>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="Application">
+                <h1>🌐Application🈸</h1>
+            </div>
+
+
+
+
+
+
+            <div class="beginnersection" id="beginner">
+                <section>
+                    <h2>Custom Access Control</h2>
+                    <p>A user management system that restricts access to sensitive information based on user roles.</p>
+                    <ul>
+                        <pre>
+<code>
+const user = {
+    _role: 'user',
+    _salary: 50000,
+
+    get salary() {
+        if (this._role === 'admin') {
+            return this._salary;
+        } else {
+            console.error("Access denied: Only admins can view salaries");
+            return null;
+        }
+    }
+};
+
+user._role = 'user';
+console.log(user.salary); // Output: "Access denied: Only admins can view salaries"
+
+user._role = 'admin';
+console.log(user.salary); // Output: 50000
+    
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+                
+
+                <section>
+                    <h2>Data Validation</h2>
+                    <ul>
+                        <pre>
+<code>
+const user = {
+    _age: 0,
+
+    get age() {
+        return this._age;
+    },
+
+    set age(value) {
+        if (value > 0) {
+            this._age = value;
+        } else {
+            console.error("Age must be a positive number");
+        }
+    }
+};
+
+user.age = 25; // Valid input
+console.log(user.age); // Output: 25
+
+user.age = -5; // Invalid input, triggers validation
+// Output: "Age must be a positive number"
+    
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script src="index.js">
+    </script>
+
+    <script>
+        const Person={
+            firstName:"JOhn",
+            lastName:"Doe",
+
+            get fullName(){
+                return `${this.firstName} ${this.lastName}`;
+            },
+
+            set fullName(name){
+                let parts=name.split(" ");
+                //console.log(parts[0]);
+                this.firstName=parts[0];
+                this.lastName=parts[1];
+
+            }
+        }
+        console.log(Person.fullName);//output:JOhn Doe
+        Person.fullName="Shah sultan";
+        console.log(Person.fullName);//output:Shah sultan
+    </script>
+
+
+</body>
+
+</html>

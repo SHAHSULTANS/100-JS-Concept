@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        code{
+            font-size: 16px;
+        }
+       
+
+    </style>
+
+</head>
+
+<body>
+    <div class="nav">
+        <button class="hamberger" id="aside" onclick="showCol25()">&#9776;</button>
+        
+        <div class="logo">
+            <div class="mylogo">
+                <img src="images/mylogo2.png" alt="">
+            </div>
+        </div>
+        
+        <div class="search">
+            <input type="text" id="navsearch" placeholder="search here..." class="search" onkeyup="navsearch()">
+        </div>
+        <div class="navmenu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+
+        </div>
+        <button class="hamberger" onclick="hamberger()">&#9776;</button>
+    </div>
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-25">
+
+            
+            <h2 style="text-align: center;">100+ JavaScript</h2>
+            <a href="index.html">Loop In JS</a>
+
+            <a href="function_in_Js.html">Function</a>
+            <a href="localStorage.html" class="active">localStorage</a>
+
+
+
+
+            <a href="built_in_drag_drop.html">Drag Drop</a>
+            <a href="object_getter_setter.html">Object get set</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Asynchronous JS</h3>
+            <a href="call_back.html">Callback</a>
+            <a href="promises.html">Promises</a>
+
+
+
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Web API</h3>
+            <a href="web_API_intro.html" >Web API Intro</a>
+            <a href="cookie.html" >Cookie</a>
+            <a href="fetching_data.html" >Fetch API</a>
+            
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">JS PDF</h3>
+            <a href="jsPdf.html">Basic Pdf</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Toast.js</h3>
+
+            <a href="toastrJS.html" class="active">Basic Toastr</a>
+
+
+
+
+
+        </div>
+
+
+        <div class="col-75">
+            <div class="projectname">
+                <h1>localStorage🫙</h1>
+            </div>
+
+            <div class="beginnerpurpose">
+                <div class="condition">
+
+                    <h3>localStorage in JS is a web storage API that allows you to store key-value pairs in a web browser with no expiration time.</h3>
+
+                    <strong style="background-color: #dbc;padding:5px;">JS supports different kinds of web storage, including localStorage, sessionStorage, and cookies.</strong>
+
+                    <ul>
+                        <li><strong>Set item in localStorage</strong><br>
+                        <code>localStorage.setItem('key', 'value');
+                        </code></li>
+
+                        <li><strong>Get an item form localStorage</strong><br>
+                        <code>var value = localStorage.getItem('key');
+                        </code></li>
+
+                        <li><strong>Remove an item form localStorage</strong><br>
+                        <code>localStorage.removeItem('key');</code></li>
+
+                        <li><strong>Iterate over all keys in localStorage</strong><br>
+                        <code>for (var i = 0; i < localStorage.length; i++) {<br>
+                            var key = localStorage.key(i);<br>
+                            var value = localStorage.getItem(key);<br>
+                            console.log(key, value);<br>
+                        }
+                        </code></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="showcontent">
+
+
+            </div>
+
+
+
+            <div class="Application">
+                <h1>🌐Application🈸</h1>
+            </div>
+
+
+
+
+
+
+            <div class="beginnersection" id="beginner">
+                <section>
+                  <h2>Enhancing User Experiance</h2>
+                    <ul>
+                        <li><strong> Theme Preference: </strong>stroring user selected themes(light,dark).</li>
+                        <li><strong>Form Autofill: </strong> <span>save user entered form data for quicker completion on future visit.</span></li>
+
+                        <li><strong>Cart Management: </strong> persist shopping cart items even after closing the browser or switching devices.</li>
+
+                        <li><strong>Game Progress: </strong> save game score etc</li>
+
+                        <li><strong>User Settings: </strong>Remember user defined setting like font-size, language or notification.</li>
+
+
+                    </ul>
+                </section>
+
+
+                
+
+
+
+
+
+
+    <script src="index.js">
+    </script>
+
+    <script>
+        
+    </script>
+
+
+</body>
+
+</html>

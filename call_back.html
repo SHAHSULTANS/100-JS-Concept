@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback in JS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset margins for p, ul, and pre */
+     
+    </style>
+
+</head>
+
+<body>
+    <div class="nav">
+        <button class="hamberger" id="aside" onclick="showCol25()">&#9776;</button>
+        
+        <div class="logo">
+            <div class="mylogo">
+                <img src="images/mylogo2.png" alt="">
+            </div>
+        </div>
+        
+        <div class="search">
+            <input type="text" id="navsearch" placeholder="search here..." class="search" onkeyup="navsearch()">
+        </div>
+        <div class="navmenu">
+            <a href="#" >Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+
+        </div>
+        <button class="hamberger" onclick="hamberger()">&#9776;</button>
+    </div>
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-25">
+
+            
+            <h2 style="text-align: center;">100+ JavaScript</h2>
+            <a href="index.html">Loop In JS</a>
+
+            <a href="function_in_Js.html">Function</a>
+            <a href="localStorage.html">localStorage</a>
+
+
+
+
+            <a href="built_in_drag_drop.html">Drag Drop</a>
+            <a href="object_getter_setter.html">Object get set</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Asynchronous JS</h3>
+            <a href="call_back.html" class="active">Callback</a>
+            <a href="promises.html">Promises</a>
+
+
+
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Web API</h3>
+            <a href="web_API_intro.html" >Web API Intro</a>
+            <a href="cookie.html" >Cookie</a>
+            <a href="fetching_data.html" >Fetch API</a>
+            
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">JS PDF</h3>
+            <a href="jsPdf.html" >Basic Pdf</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Toast.js</h3>
+
+            <a href="toastrJS.html" class="active">Basic Toastr</a>
+
+
+
+
+
+        </div>
+
+
+        <div class="col-75">
+            <div class="projectname">
+                <h1>📲Learn about Asynchronous JS Callback(Custom)📞</h1>
+            </div>
+
+            <div class="beginnerpurpose">
+                <div class="condition">
+                    <h3 style="margin-bottom: 5px;">A callback is a <i style="color: red;">function</i> passed as an argument to another function, which is executed after the main function finishes it's job.</h3>
+                    <strong>A callback is like a message you send to a friend saying,"Call me back when you're done with your work"</strong><br>
+
+                    <strong style="background-color: #dbc;padding:5px;">Basic callback function:</strong>
+
+                    <ul>
+                       <pre>
+                        <code>
+function greet(name, callback) {
+    console.log("Hello, " + name + "!");
+    callback();
+}
+
+// This is the callback function
+function sayGoodbye() {
+    console.log("Goodbye!");
+}
+
+greet("Alice", sayGoodbye);                  
+                        </code>
+                       </pre>
+
+                    </ul>
+                </div>
+
+
+
+
+
+                <div class="condition">
+
+                    <strong style="background-color: #dbc;padding:5px;">Here is another example.</strong>
+                    <p><span style="color: red;">Note:</span>The setTimeout function in JS does not return a value from the function that it delays. Instead it returns a unique identifier.</p>
+
+                    <ul>
+                       <pre>
+                        <code>
+function Sum(num1,num2,callback){
+    setTimeout(()=>{
+        let result=num1+num2;
+        callback(result);
+
+    },2000);
+}
+
+Sum(4,5,function(result){
+    console.log(result);
+});
+                        </code>
+                       </pre>
+
+                    </ul>
+                </div>
+
+
+
+
+                <div class="condition">
+
+                    <strong style="background-color: #dbc;padding:5px;">Here is another example.</strong>
+
+                    <ul>
+                       <pre>
+                        <code>
+function Task1(callback){
+    setTimeout(()=>{
+        console.log("completed task 1");
+        callback();
+
+    },2000)
+}
+
+function Task2(callback){
+    setTimeout(()=>{
+        console.log("completed task 2");
+        callback();
+    },1500);
+}
+
+function Task3(callback){
+    setTimeout(()=>{
+        console.log("completed task 3");
+        callback();
+    },3000);
+}
+
+function Task4(callback){
+    setTimeout(()=>{
+        console.log("completed task 4");
+        callback();
+    },2500);
+    
+}
+
+
+//Here output is Asynchronus. without callback.
+/*
+Task1();
+Task2();
+Task3();
+Task4();
+*/
+
+Task1(()=>{
+    Task2(()=>{
+        Task3(()=>{
+            Task4(()=>{
+                console.log("All task is completed");
+            });
+        });
+
+    });
+});                        
+                        </code>
+                       </pre>
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            
+
+
+
+
+
+            <!-- <div class="jscode snipet">
+                <h2>for</h2>
+                <div class="jscontainer">
+                    <div class="js">
+                        <pre>
+<code>
+for(let i=0;i< 5;i++){
+    console.log(i);
+}
+// Output: 0, 1, 2, 3, 4
+</code>
+</pre>
+
+
+                    </div>
+                </div>
+            </div> -->
+
+
+
+
+            <div class="Application">
+                <h1>🌐Application🈸</h1>
+            </div>
+
+
+
+
+
+
+            <div class="beginnersection" id="beginner">
+                <section>
+                    <h2>Form Validation</h2>
+                    <ul>
+                        <pre>
+<code>
+function formValidation(data,callback){
+    let isvalid=callback(data);
+    if(isvalid){
+        console.log("Form is Valid");
+    }
+    else{
+        console.log("Form is Invalid");
+    }
+
+}
+
+
+formValidation({age:24},function(data){
+    return data.age>=18;
+
+});
+
+formValidation("shanto@gmail.com",function(email){
+    return email.includes("@");
+});
+    
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+                
+
+                <section>
+                    <h2>Database Query</h2>
+                    <ul>
+                        <pre>
+<code>
+function fetchDataFromDatabase(query, callback) {
+    // Simulate a database call
+    setTimeout(() => {
+        let data = { id: 1, name: 'Shanto Doe' }; // Example data
+        callback(data);
+    }, 1000);
+}
+
+// Custom callback to handle the data
+fetchDataFromDatabase('SELECT * FROM users', function(data) {
+    console.log('User name:', data.name);
+});
+
+fetchDataFromDatabase('SELECT * FROM users', function(data) {
+    console.log('User ID:', data.id);
+});
+    
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    
+
+
+
+
+
+    <script src="index.js">
+
+    </script>
+    
+
+
+
+
+
+    <script>
+       
+        
+        
+    </script>
+
+
+</body>
+
+</html>

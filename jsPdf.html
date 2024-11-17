@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create PDF with jsPDF</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+    
+    <style>
+        /* Reset margins for p, ul, and pre */
+         button{
+            cursor: pointer;
+            padding: 8px 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="nav">
+        <button class="hamberger" id="aside" onclick="showCol25()">&#9776;</button>
+        
+        <div class="logo">
+            <div class="mylogo">
+                <img src="images/mylogo2.png" alt="">
+            </div>
+        </div>
+
+        <div class="search">
+            <input type="text" id="navsearch" placeholder="search here..." class="search" onkeyup="navsearch()">
+        </div>
+        <div class="navmenu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+
+        </div>
+        <button class="hamberger" onclick="hamberger()">&#9776;</button>
+    </div>
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-25">
+
+            <h2 style="text-align: center;">100+ JavaScript</h2>
+            <a href="index.html">Loop In JS</a>
+
+            <a href="function_in_Js.html">Function</a>
+            <a href="localStorage.html">localStorage</a>
+
+
+
+
+            <a href="built_in_drag_drop.html">Drag Drop</a>
+            <a href="object_getter_setter.html">Object get set</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Asynchronous JS</h3>
+            <a href="call_back.html">Callback</a>
+            <a href="promises.html">Promises</a>
+
+
+
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Web API</h3>
+            <a href="web_API_intro.html" >Web API Intro</a>
+            <a href="cookie.html" >Cookie</a>
+            <a href="fetching_data.html" >Fetch API</a>
+            
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">JS PDF</h3>
+            <a href="jsPdf.html" class="active">Basic Pdf</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Toast.js</h3>
+
+            <a href="toastrJS.html" class="active">Basic Toastr</a>
+
+
+
+
+
+
+        </div>
+
+
+        <div class="col-75">
+            <div class="projectname">
+                <h1>Create Pdf File</h1>
+            </div>
+
+            <div class="beginnerpurpose">
+                <div class="condition">
+                    <h3 style="line-height: 1.3;">To create a basic PDF file using JavaScript and allow the user to download it, you can use popular jsPDF libray. You can either download it or use a <i style="border: 1px solid red;">CDN</i></h3>
+
+                   
+                <div class="showcontent">
+                    <h2 style="display:inline">Generate a PDF file.</h2>
+                    <span>Clicked the getPDF button below</span><br>
+                    <hr>
+                    <button class=" btn" onclick="generatePdf()">GetPDF</button>
+                </div>
+
+
+
+                <strong style="background-color: #dbc;padding:5px;">Basic Example: of Download PDF</strong>
+
+                <ul>
+                    <pre>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Create PDF with jsPDF&lt;/title&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Generate PDF File Example&lt;/h1&gt;
+    &lt;button onclick="generatePDF()"&gt;Download PDF&lt;/button&gt;
+
+    &lt;script&gt;
+        function generatePDF() {
+            // Load jsPDF
+            const { jsPDF } = window.jspdf;
+
+            // Create a new PDF document
+            const doc = new jsPDF();
+
+            // Add some text
+            doc.text("Hello World!", 10, 10);
+
+            // Download the PDF
+            doc.save("example.pdf");
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;                        
+                    </code>
+                   </pre>
+
+                </ul>
+                <h3>Explanation</h3>
+                <ul>
+                    <li><b>jsPDF: </b>A popular JavaScript library for creating PDF files.</li>
+                    <li><b>doc.text("Hello world!!",10,10) </b>This method adds the text "Hello World!" at the coordinates (10, 10) on the PDF page.</li>
+                    <li><b>doc.save(pdfExample.pdf): </b>This saves and triggers the download of the PDF file name pdfExample.pdf</li>
+                </ul>
+
+                
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="jscode snipet">
+                <h2>for</h2>
+                <div class="jscontainer">
+                    <div class="js">
+                        <pre>
+<code>
+for(let i=0;i< 5;i++){
+    console.log(i);
+}
+// Output: 0, 1, 2, 3, 4
+</code>
+</pre>
+
+
+                    </div>
+                </div>
+            </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <script src="index.js"></script>
+
+           
+
+            
+
+
+
+
+
+
+        <script>
+            function generatePdf(){
+                //load js PDF
+                const {jsPDF}=window.jspdf;
+
+                const doc=new jsPDF();
+                doc.text("Hello world!!",10,10);
+
+                doc.save("pdfExample.pdf");
+            }
+            
+        </script>
+
+
+</body>
+
+</html>

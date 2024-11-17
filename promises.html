@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset margins for p, ul, and pre */
+    
+    </style>
+
+</head>
+
+<body>
+    <div class="nav">
+        <button class="hamberger" id="aside" onclick="showCol25()">&#9776;</button>
+        
+        <div class="logo">
+            <div class="mylogo">
+                <img src="images/mylogo2.png" alt="">
+            </div>
+        </div>
+        
+        <div class="search">
+            <input type="text" id="navsearch" placeholder="search here..." class="search" onkeyup="navsearch()">
+        </div>
+        
+        <div class="navmenu">
+            <a href="#" >Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+
+        </div>
+        <button class="hamberger" onclick="hamberger()">&#9776;</button>
+    </div>
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-25">
+
+            
+            <h2 style="text-align: center;">100+ JavaScript</h2>
+            <a href="index.html">Loop In JS</a>
+
+            <a href="function_in_Js.html">Function</a>
+            <a href="localStorage.html">localStorage</a>
+
+
+
+
+            <a href="built_in_drag_drop.html">Drag Drop</a>
+            <a href="object_getter_setter.html">Object get set</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Asynchronous JS</h3>
+            <a href="call_back.html">Callback</a>
+            <a href="promises.html" class="active">Promises</a>
+
+
+
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Web API</h3>
+            <a href="web_API_intro.html" >Web API Intro</a>
+            <a href="cookie.html" >Cookie</a>
+            <a href="fetching_data.html" >Fetch API</a>
+            
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">JS PDF</h3>
+            <a href="jsPdf.html" >Basic Pdf</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Toast.js</h3>
+
+            <a href="toastrJS.html" class="active">Basic Toastr</a>
+
+
+
+
+
+        </div>
+
+
+        <div class="col-75">
+            <div class="projectname">
+                <h1>💑Learn About Asynchronous JS Promises🤝</h1>
+            </div>
+
+            <div class="beginnerpurpose">
+                <div class="condition">
+                    <h3>Promises are a fundamental concept in modern JavaScript for handling <i style="color: red;">ansynchronous operations</i>.The provide a cleaner and more manageable way to deal with tasks that take time to complete such as fetching data from server, reading files or complex calculations.</h3>
+                    
+                    <h3 style="color: rgb(255, 0, 0);"> <strong>Why uses promises?</strong> </h3>
+                    <ul>
+                        <li><strong>Avoiding Callback Hell: </strong>Promises help manage multiple asynchronous task without creating nested callbacks.</li>
+                        
+                        <li><strong>Better Error Handling: </strong>Promises provide a clear way to handle errors using catch().</li>
+                        
+                        
+                    </ul>
+                    <hr>
+                    
+                    <h3 style="color: rgb(255, 0, 0);"> <strong>Promises has three states:</strong> </h3>
+                    <ul>
+                        <li><strong>Pending: </strong>The initial state, neither fulfilled nor rejected.</li>
+
+                        <li><strong>Fulfilled: </strong>The operation completed successfully.</li>
+
+                        <li><strong>Rejected: </strong>The operation failed.</li>
+                    </ul>
+
+                    <strong style="background-color: #dbc;padding:5px;">Basic declarations:</strong>
+
+                    <ul>
+                       <pre>
+                        <code>
+const myPromise = new Promise((resolve, reject) => {
+    // Asynchronous operation here
+    if (/* condition for success */) {
+        resolve(value); // Fulfill the promise with a value
+    } else {
+        reject(error); // Reject the promise with an error
+    }
+    });
+
+
+myPromise
+  .then(value => {
+    // Handle successful result
+    console.log(value);
+  })
+  .catch(error => {
+    // Handle error
+    console.error(error);
+  });                
+                        </code>
+                       </pre>
+
+                    </ul>
+                </div>
+
+
+
+
+                <div class="condition">
+                    <h2>Here is another example</h2>
+                
+
+                    <ul>
+                       <pre>
+                        <code>
+const myPromises=new Promise((resolve,reject)=>{
+
+    setTimeout(()=>{
+        const success=true;
+        if(success){
+            resolve("Data fetched successfully");
+        }
+        else{
+            reject("Error fetching data");
+        }
+
+    },2000);
+
+});
+
+
+myPromises.then((value)=>{
+    console.log(value);
+}).catch((error)=>{
+    console.log(error);
+});          
+                        </code>
+                       </pre>
+
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="jscode snipet">
+                <h2>for</h2>
+                <div class="jscontainer">
+                    <div class="js">
+                        <pre>
+<code>
+for(let i=0;i< 5;i++){
+    console.log(i);
+}
+// Output: 0, 1, 2, 3, 4
+</code>
+</pre>
+
+
+                    </div>
+                </div>
+            </div> -->
+
+
+
+
+            <div class="Application">
+                <h1>🌐Application🈸</h1>
+            </div>
+
+
+
+
+
+
+            <div class="beginnersection" id="beginner">
+                <section>
+                    <p>Let's say you want to fetch data from an API(like user details). The process is asynchronous, so you don't know exactly when it will complete.</p>
+                    <ul>
+                        <pre>
+<code>
+function fetchData(){
+    return new Promise((resolove,reject)=>{
+
+        setTimeout(()=>{
+            const user={id:1,name:"Shanto"};
+            const success=true;
+            if(success){
+                resolove(user);
+            }
+            else{
+                reject("Failed to fetch data!!");
+            }
+
+        },2000);
+
+    });
+}
+
+fetchData().then((user)=>{
+    console.log(`User-Id: ${user.id} User-Name: ${user.name}`);
+}).catch((error)=>{
+    console.log(error);
+    
+});
+    
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+                
+
+                <section>
+                    <h2>Promises Chaining⛓️</h2>
+                    <ul>
+                        <pre>
+<code>
+function walkDog(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const walk=true;
+            if(walk){
+                resolve("You walk the dog🐕");
+            }
+            else{
+                reject("you don't walk the dog");
+            }
+
+        },1500);
+    });
+}
+
+
+function cleanKitchen(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const clean=true;
+            if(clean){
+                resolve("You clean the kitchen👩‍🍳");
+            }
+            else{
+                reject("You don't clean the kitchen");
+            }
+
+        },2500);
+    });
+}
+
+
+function takeOutTrash(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const trash=true;
+            if(trash){
+                resolve("You take the trash🗑️");
+            }
+            else{
+                reject("you don't take the trash");
+            }
+
+        },1000);
+    });
+}
+
+walkDog().then((value)=>{
+    console.log(value);
+    return cleanKitchen();
+}).then((value)=>{
+    console.log(value);
+    return takeOutTrash();
+}).then((value)=>{
+    console.log(value);
+}).catch((error)=>{
+    console.error(error);
+});
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    
+
+
+
+
+
+    <script src="index.js"></script>
+    
+
+
+
+
+
+    <script>
+
+        function walkDog(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    const walk=true;
+                    if(walk){
+                        resolve("You walk the dog🐕");
+                    }
+                    else{
+                        reject("you don't walk the dog");
+                    }
+
+                },1500);
+            });
+        }
+
+
+        function cleanKitchen(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    const clean=true;
+                    if(clean){
+                        resolve("You clean the kitchen👩‍🍳");
+                    }
+                    else{
+                        reject("You don't clean the kitchen");
+                    }
+
+                },2500);
+            });
+        }
+
+
+        function takeOutTrash(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    const trash=true;
+                    if(trash){
+                        resolve("You take the trash🗑️");
+                    }
+                    else{
+                        reject("you don't take the trash");
+                    }
+
+                },1000);
+            });
+        }
+
+        walkDog().then((value)=>{
+            console.log(value);
+            return cleanKitchen();
+        }).then((value)=>{
+            console.log(value);
+            return takeOutTrash();
+        }).then((value)=>{
+            console.log(value);
+        }).catch((error)=>{
+            console.error(error);
+        });
+      
+        
+        
+       
+        
+        
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+"The Fetch API is a modern way to make HTTP requests in JavaScript. It allows you to request resources over the network, such as data from a server, and handle the responses asynchronously using promises. Here's a basic example of how to use the Fetch API."

@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test cookie</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        #content{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px  black;
+        }
+        label{
+            margin-bottom: 8px;
+            display: block;
+            
+        }
+
+
+        input[type=text],input[type=email]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button{
+            background-color: #28a745;
+            color:white;
+
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Welcome to CoolGadgets</h1>
+        <div id="registration-form">
+            <h2>Register</h2>
+            <form action="" id="registerForm">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required>
+
+
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required>
+
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <div id="welcome-message" style="display: none;">
+            <h2>Welome back, <span id="userName"></span>!</h2>
+            <p>You are already registered. Enjoy browsing CoolGadgets!</p>
+        </div>
+    </div>
+
+
+    <script>
+
+        function setCookie(name,value,days){
+            document.cookie=name+"="+value+";"+"max-age="+(days*86400)+";path=/";
+
+        }
+
+
+
+
+
+        function getCookie(name){
+            name=name+"=";
+
+            const decodeCookie=decodeURIComponent(document.cookie);
+
+            const ca=decodeCookie.split(";");
+            for(let i=0;i<ca.length;i++){
+                let c=ca[i];
+                while(c.charAt(0)==" "){
+                    c=c.substring(1);
+                }
+                if(c.indexOf(name)==0){
+                    let substr=c.substring(name.length,c.length);
+                    return substr;
+                }
+            }
+
+            return "";
+
+        }
+
+
+        function checkRegistration(){
+            const userName=getCookie("userName");
+            //console.log(userName);
+
+            if(userName){
+                document.getElementById("registration-form").style.display='none';
+                document.getElementById("welcome-message").style.display='block';
+                document.getElementById("userName").textContent=userName;
+
+
+
+
+            }
+        }
+
+
+
+
+        document.getElementById("registerForm").addEventListener("submit",function(event){
+
+            event.preventDefault();
+
+            const name=document.getElementById("name").value;
+
+            const email=document.getElementById("email").
+            value;
+
+            //console.log(name+" "+email);
+
+            setCookie("userName",name,30);
+            setCookie("userEmail",email,30);
+
+            document.getElementById("registration-form").style.display='none';
+            document.getElementById("welcome-message").style.display='block';
+            document.getElementById("userName").textContent=userName;
+
+
+
+        });
+
+        checkRegistration();
+    </script>
+    
+</body>
+</html>

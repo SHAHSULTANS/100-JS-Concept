@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in JS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset margins for p, ul, and pre */
+       
+
+        /* Add custom spacing if needed */
+        .sampling{
+            background-color: orange
+            
+        }
+        .sampling p{
+            padding-left: 5px;
+        }
+
+        ul {
+            padding-left: 10px;
+            background-color: #333;
+            color: rgba(6, 249, 50, 0.961);
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="nav">
+        <button class="hamberger" id="aside" onclick="showCol25()">&#9776;</button>
+        
+        <div class="logo">
+            <div class="mylogo">
+                <img src="images/mylogo2.png" alt="">
+            </div>
+        </div>
+        
+        <div class="search">
+            <input type="text" id="navsearch" placeholder="search here..." class="search" onkeyup="navsearch()">
+        </div>
+        <div class="navmenu">
+            <a href="#" >Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+
+        </div>
+        <button class="hamberger" onclick="hamberger()">&#9776;</button>
+    </div>
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-25">
+
+            
+            <h2 style="text-align: center;">100+ JavaScript</h2>
+            <a href="index.html">Loop In JS</a>
+
+            <a href="function_in_Js.html" class="active">Function</a>
+            <a href="localStorage.html">localStorage</a>
+
+
+
+
+            <a href="built_in_drag_drop.html">Drag Drop</a>
+            <a href="object_getter_setter.html">Object get set</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Asynchronous JS</h3>
+            <a href="call_back.html">Callback</a>
+            <a href="promises.html">Promises</a>
+
+
+
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Web API</h3>
+            <a href="web_API_intro.html" >Web API Intro</a>
+            <a href="cookie.html" >Cookie</a>
+            <a href="fetching_data.html" >Fetch API</a>
+            
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">JS PDF</h3>
+            <a href="jsPdf.html" >Basic Pdf</a>
+            <h3 style="padding-bottom: 0;margin-bottom:5px;text-align:center">Toast.js</h3>
+
+            <a href="toastrJS.html" class="active">Basic Toastr</a>
+
+
+
+
+
+        </div>
+
+
+        <div class="col-75">
+            <div class="projectname">
+                <h1>➰Learn about of JS function🧑‍💻</h1>
+            </div>
+
+            <div class="beginnerpurpose">
+                <div class="condition">
+                    <h3>Function are fundamental building of blocks in programming and are used extensively in real-world applications to organize code, improve reusability and solve complex problems.</h3>
+
+                    <strong style="background-color: #dbc;padding:5px;">Function declarations:</strong>
+
+                    <ul>
+                       <pre>
+                        <code>
+function functionName(parameters) {
+    // code to be executed
+}  
+                        </code>
+                       </pre>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="showcontent">
+                <h2>Here are main type of function.</h2>
+
+                <div class="sampling">
+                    <p>Named Function</p>
+
+                    <ul>
+                        <pre>
+                         <code>
+function greet() {
+    console.log("Hello, World!");
+}
+                         </code>
+                        </pre>
+                     </ul>
+                </div>
+
+
+                <div class="sampling">
+                    <p>Anonymous Function</p>
+
+                    <ul>
+                        <pre>
+                         <code>
+const greet = function() {
+    console.log("Hello, World!");
+};
+                         </code>
+                        </pre>
+                     </ul>
+                </div>
+
+
+
+                <div class="sampling">
+                    <p>Arrow Function</p>
+
+                    <ul>
+                        <pre>
+                         <code>
+const greet = () => {
+    console.log("Hello, World!");
+};
+
+console.log(greet());
+                         </code>
+                        </pre>
+                     </ul>
+                </div>
+
+
+
+
+                <div class="sampling">
+                    <p>Self_Invoking Function</p>
+
+                    <ul>
+                        <pre>
+                         <code>
+(()=>{
+    console.log("Hello Shanto");
+})();
+                         </code>
+                        </pre>
+                     </ul>
+                </div>
+
+
+
+
+                <div class="sampling">
+                    <p>Contructor Function</p>
+
+                    <ul>
+                        <pre>
+                         <code>
+function Person(name,age){
+    this.name=name;
+    this.age=age;
+}
+
+const Me=new Person("shanto",23);
+console.log(Me.name+" "+Me.age);
+</code>
+                        </pre>
+                     </ul>
+                </div>
+
+
+
+                <div class="sampling">
+                    <p><strong>Async Function:</strong> A function that allows the use the <strong><i>await</i></strong> to pause execution untill a promise is resolved.</p>
+
+                    <ul>
+                        <pre>
+                         <code>
+async function fetchData() {
+    const response = await fetch('url');
+    const data = await response.json();
+    console.log(data);
+}                            
+</code>
+                        </pre>
+                     </ul>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="jscode snipet">
+                <h2>for</h2>
+                <div class="jscontainer">
+                    <div class="js">
+                        <pre>
+<code>
+for(let i=0;i< 5;i++){
+    console.log(i);
+}
+// Output: 0, 1, 2, 3, 4
+</code>
+</pre>
+
+
+                    </div>
+                </div>
+            </div> -->
+
+
+
+
+            <div class="Application">
+                <h1>🌐Application🈸</h1>
+            </div>
+
+
+
+
+
+
+            <div class="beginnersection" id="beginner">
+                <section>
+                    <h2> Handling user input, validating forms, and processing data</h2>
+                    <p>A login system that checks user credentials.</p>
+                    <ul>
+                        <pre>
+<code>
+function validateLogin(username, password) {
+    // Simulate validation logic
+    if (username === "admin" && password === "1234") {
+        return "Login successful!";
+    } else {
+        return "Invalid username or password.";
+    }
+}
+
+console.log(validateLogin("admin", "1234")); // Output: Login successful!
+console.log(validateLogin("user", "abcd"));  // Output: Invalid username or password.
+    
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+                
+
+                <section>
+                    <h2>Dynamic Content Rendering</h2>
+                    <p>A function that generates HTML content based on user data.</p>
+                    <ul>
+                        <pre>
+<code>
+function createUserCard(name,age){
+    return`&lt;div class='user-card'&gt;
+            &lt;h2&gt;${name}&lt;/h2&gt;
+            &lt;p&gt;${age}&lt;/p&gt;
+    &lt;/div&gt;`;
+}
+document.body.innerHTML=createUserCard("Shanto", 24);   
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h2>Analyzing & Tranforming Data</h2>
+                    <p>A function filter out invalid data from a entires dataset.</p>
+                    <ul>
+                        <pre>
+<code>
+let numbers=[1,2,-4,5,-6,0];
+let now=numbers.filter(number=>{
+        console.log(number);
+        return number>0;
+})
+
+console.log(numbers);
+console.log(now);
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+
+
+
+                <section>
+                    <h2>Scheduling Taks</h2>
+                    <p>A function that sends daily email reports.</p>
+                    <ul>
+                        <pre>
+<code>
+function sendDailyReport() {
+    console.log("Daily report sent at", new Date().toLocaleTimeString());
+}
+
+setInterval(sendDailyReport, 24 * 60 * 60 * 1000); // Runs once every 24 hours
+    
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+
+
+                <section>
+                    <h2>Handling API reuquest & response</h2>
+                    <p>A function that processs a user's order and returns a confrimation.</p>
+                    <ul>
+                        <pre>
+<code>
+function processOrder(order){
+    if(order.isValid){
+        return{
+            status:"success",
+            message:"Your order has been processed.",
+        };
+    }
+    else{
+        return{
+            status:"error",
+            message:"Invalid order.",
+        };
+
+    }
+
+}
+const order={isValid:true,items:["Apple","orange"]};
+
+console.log(processOrder(order));
+    
+</code>
+</pre>
+                    </ul>
+                </section>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    
+
+
+
+
+
+    <script src="index.js"></script>
+    
+
+
+
+
+
+    <script>
+       
+        
+        
+    </script>
+
+
+</body>
+
+</html>

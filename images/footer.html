@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .footer {
+            background: linear-gradient(135deg, #0d0f1f, #2c3e50, #34495e);
+
+            color: #f5f5f5;
+
+            padding: 50px 20px;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-container > div {
+            flex: 1;
+            min-width: 250px;
+            
+            text-align: center;
+        }
+        .footer-container h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #f5f5f5;
+            text-transform: uppercase;
+            border-bottom: 2px solid #fcd34d;
+            padding-bottom: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-info a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .footer-info a:hover {
+            color: #fcd34d;
+            transform: translateX(5px);
+        }
+
+        
+        .follow-icon {
+            display: flex;
+            justify-content:center;
+            gap: 20px;
+            align-items: center;
+            
+        }
+        .follow-icon a {
+            font-size: 30px;
+            text-align: center;
+            color: #f5f5f5;
+            transition: transform 0.3s, color 0.3s ease-in-out;
+        }
+        .follow-icon a:hover {
+            transform: scale(1.2);
+            color: #fcd34d;
+        }
+        .contact-form {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border: 1px solid #91a1c9;
+            box-shadow: 0 0 5px #91a1c9;
+        }
+        .contact-form button {
+            background: linear-gradient(135deg, #ff6f61, #fcd34d, #34c3db);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s ease;
+        }
+        .contact-form button:hover {
+            background: linear-gradient(135deg, #fcd34d, #34c3db, #91a1c9);
+            transform: scale(1.1);
+            color: #333;
+        }
+
+
+        .footer-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+
+
+
+            padding: 5px;
+            color: white;
+            
+        }
+        
+        .footer-img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid #fff;
+        }
+        .footer-text{
+            font-size: 17px;
+        }
+        #username{
+            font-weight: bold;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-container > div {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+                <div class="footer-info">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="contact-me">
+                <h2>Contact Me</h2>
+                <div class="footer-info">
+                    <a href="tel:01906071420">📞: 01906071420</a>
+                    <a href="mailto:20210652884sultan@juniv.edu">📧: 20210652884sultan@juniv.edu</a>
+                </div>
+            </div>
+            <div class="follow-me">
+                <h2>Follow Me</h2>
+                <div class="follow-icon">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+
+        
+    </div>
+    <div class="footer-content">
+        <img src="https://github.com/SHAHSULTANS/Picture/raw/main/mylogo2.png" alt="" class="footer-img">
+        <div class="footer-text">
+            &copy; <span id="year"></span>
+            <span id="username">Shanto.</span> All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
