@@ -100,25 +100,24 @@ code{
     font-size: 18px;
     border: none;
 }
-.nav .hamberger{
-    background-color:#ef5a40;
+.nav .hamberger {
+    background-color: #0078D7; 
     border: none;
     font-size: 20px;
     padding: 10px 15px;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px; 
     cursor: pointer;
     display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .nav .hamberger:hover {
-    background-color: #ff7043; /* Slightly brighter color on hover */
-    color: #000000;
-    transform: scale(1.01);
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: background-color 0.3s ease, transform 0.3s ease, color 0.5s ease;
+    background-color: #0053a6; 
+    transform: scale(1.05); /
 }
+
 
 
 /*To design a row div element */
