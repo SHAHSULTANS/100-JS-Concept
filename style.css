@@ -262,6 +262,10 @@ pre{
     .navmenu{
         display:none;
     }
+    .nav .hamberger{
+        font-size: 11px;
+        padding: 6px 12px;
+    }
     
     .navmenu a{
         padding: 5px;
@@ -298,12 +302,19 @@ pre{
     
 }
 @media screen and (max-width:400px) {
+    
     .navmenu{
-        padding: 0;
+        padding: 5px;
     }
     .navmenu a{
         font-size:1rem;
     }
+    .nav .logo{
+        
+        width: 40px;
+        height: 40px;
+    }
+    
 }
 
 @media screen and (max-width:350px) {
@@ -325,9 +336,6 @@ pre{
 
 
 
-    .navmenu{
-        padding:5px;
-    }
     .nav .logo{
         width: 40px;
         height: 40px;
@@ -357,7 +365,7 @@ pre{
     }
     #navsearch{
         width: 70px;
-        padding: 6px 8px;
+        padding: 6px;
         
     }
     .navmenu{
@@ -369,13 +377,11 @@ pre{
         padding: 0px;   
     }
     .nav .hamberger{
-        font-size: 18px;
-        padding: 10px;
+        font-size: 16px;
+        padding: 8px;
     }
    
-    .nav .navmenu{
-        border-bottom-right-radius: 30px;
-    }
+ 
 
 }
 
